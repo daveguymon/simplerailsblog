@@ -1,15 +1,19 @@
 <%= form_with(model: [ @article, @article.comments.build ], local: true) do |form| %>
-  <p>
-    <%= form.label :commenter %><br>
-    <%= form.text_field :commenter %>
-  </p>
-
-  <p>
-    <%= form.label :body %><br>
-    <%= form.text_area :body %>
-  </p>
-
-  <p>
-    <%= form.submit %>
-  </p>
+  <form>
+    <div class="form-group row input-group-lg">
+      <div class="col col-lg-4">
+        <%= form.label :commenter %><br>
+        <%= form.text_field :commenter, :class => "form-control col-md-4" %>
+      </div>
+    </div>
+    <div class="form-group row input-group-lg">
+      <div class="col col-lg-6">
+        <%= form.label :body %><br>
+        <%= form.text_area :body, :class => "form-control", :rows => "5"%>
+      </div>
+    </div>
+    <p>
+      <%= form.submit :class => "button btn btn-primary btn-sm"%>
+    </p>
+  </form>
 <% end %>
