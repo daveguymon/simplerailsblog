@@ -1,15 +1,14 @@
-<p>
-  <strong>Commenter:</strong>
-  <%= comment.commenter %>
-</p>
+<div class="media">
+
+  <div class="media-body">
+    <h5 class="media-heading"><%= comment.commenter %></h5>
+    <blockquote><%= comment.body %></blockquote>
+  </div>
+</div>
 
 <p>
-  <strong>Comment:</strong>
-    <%= comment.body %>
-</p>
-
-<p>
-  <%= link_to 'Destroy Comment', [comment.article, comment],
+  <%= link_to 'Delete Comment', [comment.article, comment],
               method: :delete,
-              data: { confirm: 'Are you sure?' } %>
+              data: { confirm: 'Are you sure?' },
+              :class => "btn-danger btn-sm" %>
 </p>
