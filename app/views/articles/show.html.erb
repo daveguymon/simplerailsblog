@@ -1,5 +1,4 @@
-<%= link_to 'Edit', edit_article_path(@article), :class => "card-link btn btn-warning btn-sm" %>
-<%= link_to 'Back', articles_path, :class => "card-link btn btn-default btn-sm" %>
+
 <div class="card" style="max-width: 100%">
   <div class="card-body" style="
       border: #E7E7E7;
@@ -11,6 +10,8 @@
     <p class="card-subtitle mb-2 text-muted"><%= @article.text %></p>
   </div>
 </div>
+<%= link_to 'Edit', edit_article_path(@article), :class => "card-link btn btn-warning btn-sm" %>
+<%= link_to 'Back', articles_path, :class => "card-link btn btn-default btn-sm" %>
 
 <h4>Comments</h4>
 <%= render @article.comments %>

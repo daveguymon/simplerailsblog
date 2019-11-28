@@ -28,7 +28,8 @@
     </div>
   </div>
   <p>
-    <%= form.submit :class => "button btn btn-primary"%>
+    <%= form.submit :class => "button btn btn-primary btn-sm"%>
+    <%= link_to 'Cancel', articles_path, :class => "button btn btn-danger btn-sm" %>
   </p>
   </form>
 <% end %>

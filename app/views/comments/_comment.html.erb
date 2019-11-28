@@ -1,11 +1,9 @@
 <div class="media">
-
   <div class="media-body">
     <h5 class="media-heading"><%= comment.commenter %></h5>
     <blockquote><%= comment.body %></blockquote>
   </div>
 </div>
-
 <p>
   <%= link_to 'Delete Comment', [comment.article, comment],
               method: :delete,
