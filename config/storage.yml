@@ -8,7 +8,7 @@ test:
 
 amazon:
   service: S3
-  access_key_id: "AKIAIBINGJEWFSHXENUA"
-  secret_access_key: "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"
+  access_key_id: "ENV[AWS_ACCESS_KEY]"
+  secret_access_key: "ENV[AWS_SECRET_KEY]"
   bucket: "harpersblog"
   region: "us-east-2" # e.g. 'us-east-1'
