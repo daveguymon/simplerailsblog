@@ -6,6 +6,9 @@
       border-radius: 2px;
       padding: 10px;
       margin: 10px 0px;">
+    <% if @article.image.attached? %>
+      <img src="<%= url_for(@article.image)%>">
+    <% end %>
     <h4 class="card-title"><%= @article.title %></h4>
     <p class="card-subtitle mb-2 text-muted"><%= @article.text %></p>
   </div>
