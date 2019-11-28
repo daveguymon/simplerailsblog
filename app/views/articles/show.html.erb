@@ -1,18 +1,19 @@
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
-
-<p>
-  <strong>Text:</strong>
-  <%= @article.text %>
-</p>
+<%= link_to 'Edit', edit_article_path(@article), :class => "card-link btn btn-warning btn-sm" %>
+<%= link_to 'Back', articles_path, :class => "card-link btn btn-default btn-sm" %>
+<div class="card" style="max-width: 100%">
+  <div class="card-body" style="
+      border: #E7E7E7;
+      border-style: solid;
+      border-radius: 2px;
+      padding: 10px;
+      margin: 10px 0px;">
+    <h4 class="card-title"><%= @article.title %></h4>
+    <p class="card-subtitle mb-2 text-muted"><%= @article.text %></p>
+  </div>
+</div>
 
 <h2>Comments</h2>
 <%= render @article.comments %>
 
 <h2>Add a comment:</h2>
 <%= render 'comments/form' %>
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>

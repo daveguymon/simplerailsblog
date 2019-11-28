@@ -1,21 +1,20 @@
 <h1>Blog Posts</h1>
-<%= link_to 'New Article', new_article_path %>
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-    <th colspan="2"></th>
-  </tr>
+
+<%= link_to 'New Article', new_article_path, :class => "btn btn-default btn-sm" %>
 
   <% @articles.each do |article| %>
-    <tr>
-      <td><%= article.title %></td>
-      <td><%= article.text %></td>
-      <td><%= link_to 'Show', article_path(article) %></td>
-      <td><%= link_to 'Edit', edit_article_path(article) %></td>
-      <td><%= link_to 'Destroy', article_path(article),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
-    </tr>
+    <div class="card" style="max-width: 100%">
+      <div class="card-body" style="
+          border: #E7E7E7;
+          border-style: solid;
+          border-radius: 2px;
+          padding: 10px;
+          margin: 10px 0px;">
+        <h4 class="card-title"><%= article.title %></h4>
+        <p class="card-subtitle mb-2 text-muted"><%= article.text %></p>
+        <%= link_to 'Read', article_path(article), :class => "card-link btn btn-primary btn-sm" %>
+        <%= link_to 'Edit', edit_article_path(article), :class => "card-link btn btn-warning btn-sm" %>
+        <%= link_to 'Delete', article_path(article), method: :delete, data: { confirm: 'Are you sure?' }, :class => "card-link btn btn-danger btn-sm" %>
+      </div>
+    </div>
   <% end %>
-</table>
