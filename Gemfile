@@ -12,7 +12,7 @@ ruby '2.6.3'
 gem 'rails', '~> 5.1.7'
 # Use sqlite3 as the database for Active Record
 gem 'pg'
-
+gem 'rails_12factor', group: :production
 gem 'jquery-rails'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
